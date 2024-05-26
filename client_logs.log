@@ -1,0 +1,153 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client4.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client3.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:36:06] "[33mPOST /train1 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\numeric.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\umath.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\numerictypes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\fromnumeric.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\arrayprint.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\_asarray.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\_ufunc_config.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\memmap.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\function_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\getlimits.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\shape_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\core\\einsumfunc.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\type_check.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\index_tricks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\function_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\nanfunctions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\shape_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\stride_tricks.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\twodim_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\ufunclike.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\histograms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\polynomial.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\arraysetops.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy\\lib\\npyio.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:37:47] "[33mPOST /train1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:37:49] "[33mPOST /train1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:37:54] "[33mPOST /train2 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:37:55] "[33mPOST /train2 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 01:38:29] "[33mPOST /train2 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 523-359-887
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\krish\\Downloads\\credit-risk-federated-learning-main\\fed-learning\\client2.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.10.107:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:flwr:
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+INFO:flwr:Opened insecure gRPC connection (no certificates were passed)
+DEBUG:flwr:ChannelConnectivity.IDLE
+DEBUG:flwr:ChannelConnectivity.READY
+DEBUG:flwr:gRPC channel closed
+INFO:flwr:Disconnect and shut down
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 02:11:04] "[35m[1mPOST /train2 HTTP/1.1[0m" 500 -
+WARNING:flwr:
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+INFO:flwr:Opened insecure gRPC connection (no certificates were passed)
+DEBUG:flwr:ChannelConnectivity.IDLE
+DEBUG:flwr:ChannelConnectivity.CONNECTING
+DEBUG:flwr:ChannelConnectivity.TRANSIENT_FAILURE
+DEBUG:flwr:gRPC channel closed
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 02:11:26] "[35m[1mPOST /train2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://192.168.10.107:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:flwr:
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+INFO:flwr:Opened insecure gRPC connection (no certificates were passed)
+DEBUG:flwr:ChannelConnectivity.IDLE
+DEBUG:flwr:ChannelConnectivity.CONNECTING
+DEBUG:flwr:ChannelConnectivity.READY
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://192.168.10.107:8002
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://192.168.10.107:8004
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+WARNING:flwr:
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+INFO:flwr:Opened insecure gRPC connection (no certificates were passed)
+DEBUG:flwr:ChannelConnectivity.IDLE
+DEBUG:flwr:ChannelConnectivity.READY
