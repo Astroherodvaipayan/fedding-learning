@@ -1,86 +1,113 @@
 from flask import Flask, request, jsonify
+import threading
 import warnings
 import flwr as fl
 import numpy as np
 import utils
 import pickle
 
-app = Flask(_name_)
+app = Flask(__name__)
 
+# Implementing logistic regression from scratch
 class LogisticRegression:
-    def _init_(self, learning_rate=0.01, num_iterations=1000):
+    def __init__(self, learning_rate=0.01, max_iter=1000):
         self.learning_rate = learning_rate
-        self.num_iterations = num_iterations
+        self.max_iter = max_iter
         self.weights = None
-        self.bias = None
-    
+
     def sigmoid(self, z):
         return 1 / (1 + np.exp(-z))
-    
-    def cost_function(self, h, y):
-        return (-1 / len(y)) * np.sum(y * np.log(h) + (1 - y) * np.log(1 - h))
-    
+
     def fit(self, X, y):
-        # Initialize weights and bias
-        self.weights = np.zeros(X.shape[1])
-        self.bias = 0
-        
-        for i in range(self.num_iterations):
-            # Compute the linear combination of inputs and weights
-            z = np.dot(X, self.weights) + self.bias
-            
-            # Apply sigmoid function to get probabilities
-            h = self.sigmoid(z)
-            
-            # Compute the gradient of the cost function
-            dw = (1 / len(y)) * np.dot(X.T, (h - y))
-            db = (1 / len(y)) * np.sum(h - y)
-            
-            # Update weights and bias
-            self.weights -= self.learning_rate * dw
-            self.bias -= self.learning_rate * db
+        n_samples, n_features = X.shape
+        self.weights = np.zeros(n_features)
+        for _ in range(self.max_iter):
+            linear_model = np.dot(X, self.weights)
+            y_predicted = self.sigmoid(linear_model)
+            gradient = np.dot(X.T, (y_predicted - y)) / n_samples
+            self.weights -= self.learning_rate * gradient
 
     def predict_proba(self, X):
-        # Compute probabilities using the learned weights and bias
-        z = np.dot(X, self.weights) + self.bias
-        probabilities = self.sigmoid(z)
-        return probabilities
+        linear_model = np.dot(X, self.weights)
+        return self.sigmoid(linear_model)
 
-def train_model(X_train, y_train, model):
-    model.fit(X_train, y_train)
-    return model
+    def predict(self, X):
+        return self.predict_proba(X) >= 0.5
 
-@app.route('/train', methods=['POST'])
+    def score(self, X, y):
+        y_pred = self.predict(X)
+        return np.mean(y_pred == y)
+
+# Flower client class
+class FlowerClient(fl.client.NumPyClient):
+    def __init__(self, X_train, y_train, X_test, y_test):
+        super().__init__()
+        self.X_train = X_train
+        self.y_train = y_train
+        self.X_test = X_test
+        self.y_test = y_test
+        self.model = LogisticRegression(learning_rate=0.01, max_iter=1000)
+
+    def get_parameters(self, config): 
+        return self.model.weights
+
+    def fit(self, parameters, config): 
+        self.model.weights = parameters
+        # Ignore convergence failure due to low local epochs
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            self.model.fit(self.X_train, self.y_train)
+            filename = f"model/client3/client_3_round_{config['server_round']}_model.sav"
+            pickle.dump(self.model, open(filename, 'wb'))
+        return self.model.weights, len(self.X_train), {}
+
+    def evaluate(self, parameters, config): 
+        self.model.weights = parameters
+        preds = self.model.predict_proba(self.X_test)
+        loss = log_loss(self.y_test, preds, labels=[1,0])
+        accuracy = self.model.score(self.X_test, self.y_test)
+        return loss, len(self.X_test), {"accuracy": accuracy}
+
+def start_flower_client(X_train, y_train, X_test, y_test):
+    flower_client = FlowerClient(X_train, y_train, X_test, y_test)
+    fl.client.start_numpy_client(server_address="localhost:8080", client=flower_client)
+
+@app.route('/train1', methods=['POST'])
 def train():
     try:
         # Load data
-        (X_train, y_train), (X_test, y_test) = utils.load_data(client="client1")
+        (X_train, y_train), (X_test, y_test) = utils.load_data(client="client3")
         
         # Take only 100 rows
         X_train = X_train[:100]
         y_train = y_train[:100]
-
+        
         # Partition data
         partition_id = np.random.choice(10)
         (X_train, y_train) = utils.partition(X_train, y_train, 10)[partition_id]
 
         # Initialize model
-        model = LogisticRegression(learning_rate=0.01, num_iterations=1000)
+        global model
+        model = LogisticRegression(
+            learning_rate=0.01,
+            max_iter=1000
+        )
 
-        # Train the model
-        trained_model = train_model(X_train, y_train, model)
+        # Set initial parameters
+        model.weights = np.zeros(X_train.shape[1])
 
-        # Save the trained model
-        filename = f"model/client1/client_1_round_model.sav"
-        pickle.dump(trained_model, open(filename, 'wb'))
-
-        # After training is completed, return the weights as JSON
-        weights = trained_model.weights.tolist()
+        # Print initial weights
+        weights = model.weights.tolist()
+        print("Initial Weights:", weights)
+        
+        # Start Flower client in a separate thread
+        thread = threading.Thread(target=start_flower_client, args=(X_train, y_train, X_test, y_test))
+        thread.start()
+        
         return jsonify({"weights": weights})
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 
-if _name_ == '_main_':
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(port=5002, debug=True)
